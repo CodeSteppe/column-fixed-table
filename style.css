@@ -4,7 +4,7 @@
 
 table {
   border-collapse: collapse;
-  width: auto;
+  width: max-content;
   font-size: 1.3rem;
 }
 
@@ -20,4 +20,8 @@ td:first-child {
   left: 0;
   z-index: 1;
   background-color: #fff;
+}
+
+th:not(:first-child) {
+  width: 100vw;
 }
