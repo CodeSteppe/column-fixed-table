@@ -20,6 +20,8 @@ td:first-child {
   left: 0;
   z-index: 1;
   background-color: #fff;
+  box-shadow: 2px 0 2px 2px #000;
+  border-style: groove;
 }
 
 th:not(:first-child) {
