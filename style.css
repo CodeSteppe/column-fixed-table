@@ -1,11 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 16px;
+}
+
 .table-container {
   overflow-x: auto;
 }
 
 table {
   border-collapse: collapse;
+  border-spacing: -1px;
   width: max-content;
   font-size: 1.3rem;
+
 }
 
 th,
@@ -17,13 +29,34 @@ td {
 th:first-child,
 td:first-child {
   position: sticky;
-  left: 0;
+  left: 1px;
   z-index: 1;
   background-color: #fff;
-  box-shadow: 2px 0 2px 2px #000;
-  border-style: groove;
 }
 
 th:not(:first-child) {
   width: 100vw;
+}
+
+th:first-child::before,
+td:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  border-left: 2px solid #000;
+}
+
+th:first-child::after,
+td:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  transform: translateX(100%);
+  pointer-events: none;
+  box-shadow: inset 10px 0 8px -8px rgb(5 5 5 / 6%);
 }
