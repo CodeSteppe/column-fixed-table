@@ -13,39 +13,31 @@ body {
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: -1px;
+  border-spacing: 0;
   width: max-content;
   font-size: 1.3rem;
-
+  border-right: 1px solid #000;
+  border-top: 1px solid #000;
 }
 
 th,
 td {
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
   padding: 10px;
+  border-spacing: 0;
 }
 
 th:first-child,
 td:first-child {
   position: sticky;
-  left: 1px;
+  left: 0;
   z-index: 1;
   background-color: #fff;
 }
 
 th:not(:first-child) {
   width: 100vw;
-}
-
-th:first-child::before,
-td:first-child::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -2px;
-  border-left: 2px solid #000;
 }
 
 th:first-child::after,
