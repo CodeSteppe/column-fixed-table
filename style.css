@@ -27,27 +27,47 @@ td {
   padding: 10px;
 }
 
-th:first-child,
-td:first-child {
+.fixed {
   position: sticky;
-  left: 0;
   z-index: 1;
   background-color: #f7f7f7;
 }
 
-th:not(:first-child) {
+.fixed-left {
+  left: 0;
+}
+
+.fixed-right {
+  right: 0;
+  border-left: none;
+}
+
+th:nth-last-of-type(2),
+td:nth-last-of-type(2) {
+  border-right: 1px solid #000;
+}
+
+th:not(.fixed) {
   width: 100vw;
 }
 
-th:first-child::after,
-td:first-child::after {
+.fixed::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   width: 30px;
-  transform: translateX(100%);
   pointer-events: none;
+}
+
+.fixed-left::after {
+  right: 0;
+  transform: translateX(100%);
   box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.2);
+}
+
+.fixed-right::after {
+  left: 0;
+  transform: translateX(-100%);
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2);
 }
