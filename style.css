@@ -34,7 +34,7 @@ td {
 .fixed {
   position: sticky;
   z-index: 1;
-  background-color: #f0f2f7;
+  background-color: #a6fece;
 }
 
 .fixed-left {
@@ -67,11 +67,11 @@ th:not(.fixed) {
 .fixed-left::after {
   right: 0;
   transform: translateX(100%);
-  box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.3);
 }
 
 .fixed-right::after {
   left: 0;
   transform: translateX(-100%);
-  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.3);
 }
